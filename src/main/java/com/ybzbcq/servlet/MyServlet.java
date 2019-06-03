@@ -17,8 +17,9 @@ public class MyServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        response.getWriter().print("hello world ... servlet ,nice to meet you !");
+        response.setHeader("content-type","text/html;charset=uft-8");
+        response.setContentType("text/html;charset=uft-8");
+        response.getWriter().print("hello world ... servlet ,nice to meet you !天道");
         response.getWriter().flush();
         response.getWriter().close();
 
